@@ -56,7 +56,7 @@ const setupWebSocket = (server) => {
     })
   })
 
-  redisSubscriber.psubscribe('chat:*')
+  redisSubscriber.pSubscribe('chat:*')
 }
 
 module.exports = { setupWebSocket }
