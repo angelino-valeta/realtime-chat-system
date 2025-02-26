@@ -1,15 +1,16 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Auth from './pages/Auth';
+// import Chat from './pages/Chat';
 
 function App() {
   return (
-    <div>
-      <h1 className="text-black">Olá Mundo</h1>
-    </div>
-    // <Router>
-    //   <Route path="/" element={<></>}/>
-    //   <Route path="/chat" element={<></>}/>
-    // </Router>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Auth />} />
+        {/* <Route path="/chat" element={<Chat />} /> */}
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
