@@ -10,7 +10,7 @@ const app = express();
 const server = http.createServer(app);
 
 app.use(express.json());
-app.use(express.static('../frontend/dist')); // Servir frontend
+app.use(express.static('../frontend/dist'));
 
 app.use('/auth', authRoutes);
 app.use('/rooms', roomRoutes);
