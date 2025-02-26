@@ -10,13 +10,13 @@ const app = express();
 const server = http.createServer(app);
 
 app.use(express.json());
-app.use(express.static('../frontend/dist')); // Servir frontend
+app.use(express.static('../frontend/dist'));
 
 app.use('/auth', authRoutes);
 app.use('/rooms', roomRoutes);
 app.use('/push', pushRoutes);
 
-// setupWebSocket(server);
+setupWebSocket(server);
 
 server.listen(process.env.PORT, () => {
   console.log(`Servidor rodando na porta ${process.env.PORT}`);
